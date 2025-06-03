@@ -5,10 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My-Library</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
 </head>
 <body>
     <header>Your Library Books:</header>
+    <button id="refreshLibrary" type="submit">Refresh</button>
+    <br>
+    <br>
+    <table id="libraryBooks" border="1">
+        <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>ID</th>
+            </tr>
+            <tbody id="libraryBody"></tbody>
+          </thead>
+        </table>
     
+    <br>
+    <br>
+    <br>
+
+    <form id="bookForm">
+        <header>Add New Books:</header>
+            <div>
+                <input type="text" id="bookTitle" required placeholder="Enter the title of your book" autocomplete="off">
+                <input type="text" id="authorName" required placeholder="Enter the author's name"autocomplete="off">
+            </div>
+        <br>
+        <button type="submit">Add book</button>
+    </form>
+    <script src="scripts.js"></script>
 </body>
 </html>
