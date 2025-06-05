@@ -14,27 +14,48 @@
     <table id="libraryBooks" border="1">
         <thead>
             <tr>
-              <th>Title</th>
-              <th>Author</th>
-              <th>ID</th>
+              <th class="longerCol">Title</th>
+              <th class="longerCol">Author</th>
+              <th class="longerCol">ID</th>
+              <th class="longerCol">Status</th>
+              <th>Change Status</th>
+              <th>Delete</th>
             </tr>
-            <tbody id="libraryBody"></tbody>
-          </thead>
-        </table>
+        </thead>
+        <tbody id="libraryBody"></tbody>
+    </table>
     
     <br>
     <br>
     <br>
-
-    <form id="bookForm">
-        <header>Add New Books:</header>
-            <div>
-                <input type="text" id="bookTitle" required placeholder="Enter the title of your book" autocomplete="off">
-                <input type="text" id="authorName" required placeholder="Enter the author's name"autocomplete="off">
+    <dialog>
+        <form id="bookForm">
+        <header>Add New Book:</header>
+            <div id="inputs">
+                <div class="formRow">
+                    <label>Book Title:</label>
+                    <input type="text" id="bookTitle" required placeholder="Enter the title of your book" autocomplete="off">
+                </div>
+                <div class="formRow">
+                    <label>Author's Name:</label>
+                    <input type="text" id="authorName" required placeholder="Enter the author's name"autocomplete="off">
+                </div>
+                <div class="formRow">
+                    <label>Reading Status:</label>
+                    <select id="status">
+                        <option value="Not Read">Not Read</option>
+                        <option value="Reading">Reading</option>
+                        <option value="Finished">Finished</option>
+                    </select>
+                </div>
             </div>
         <br>
         <button type="submit">Add book</button>
+        <button id="closeDialog">Cancel</button>
     </form>
+    </dialog>
+    <button id="openDialog">Press to Add a new Book</button>
+    
     <script src="scripts.js"></script>
 </body>
 </html>

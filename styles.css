@@ -19,5 +19,35 @@ table {
 }
 
 th{
-    width: 30%;
+    width: 10%;
+}
+.longerCol {
+    width: 20%
+}
+thead{
+    height: 40px;
+}
+.customRow {
+    height: 30px;
+}
+.card {
+    align-items: center;
+
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    gap : 1rem;
+    align-items: center;
+}
+
+.formRow {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.rowButton{
+    border-radius: 5px;
 }
